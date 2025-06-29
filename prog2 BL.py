@@ -2,8 +2,6 @@ import statistics
 import math
 import numpy as np
 import scipy.stats as stats
-import scipy.optimize as optimize
-import scipy.integrate as integrate
 
 data = [12, 15, 14, 10, 18, 21, 22, 13, 17, 20]
 
@@ -47,14 +45,7 @@ data_normal = stats.norm.rvs(loc=0, scale=1, size=1000)
 mean_normal = np.mean(data_normal)
 std_normal = np.std(data_normal)
 
-def quadratic(x):
-    return x**2 - 4*x + 4
-
-opt_result = optimize.minimize(quadratic, 0)
-
-result_integral, error = integrate.quad(lambda x: x**2, 0, 1)
-
 print("SciPy Library Results:")
-print(f"Generated Normal Distribution Data - Mean: {mean_normal}, Std Dev: {std_normal}")
-print(f"Optimized result of quadratic function: {opt_result.x}")
-print(f"Numerical integration result of x^2 from 0 to 1: {result_integral} (Error estimate: {error})")
+print("Generated Normal Distribution Data : ---")
+print(f"Mean : {mean_normal}")
+print(f"Std Dev : {std_normal}")
