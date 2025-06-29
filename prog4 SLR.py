@@ -14,6 +14,9 @@ c = y_mean - m * x_mean
 
 y_pred = m * X + c
 
+print(f"Slope : {m}")
+print(f"Intercept: {c}")
+
 plt.scatter(X, y, color='blue')
 plt.plot(X, y_pred, color='red')
 plt.title("Simple Linear Regression")
