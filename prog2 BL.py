@@ -3,49 +3,45 @@ import math
 import numpy as np
 import scipy.stats as stats
 
-data = [12, 15, 14, 10, 18, 21, 22, 13, 17, 20]
+data = [float(x) for x in input("Enter numbers separated by spaces: ").split()]
 
-mean_data = statistics.mean(data)
-median_data = statistics.median(data)
-stdev_data = statistics.stdev(data)
+mean=statistics.mean(data)
+median=statistics.median(data)
+stdev=statistics.stdev(data)
 
-print("Statistics Library Results:")
-print(f"Mean: {mean_data}")
-print(f"Median: {median_data}")
-print(f"Standard Deviation: {stdev_data}")
+print("Statistics Library Results : ")
+print(f"Mean : {mean}")
+print(f"Median : {median}")
+print(f"Standard Deviation : {stdev}")     
 print()
 
-x = 25
-sqrt_x = math.sqrt(x)
-factorial_5 = math.factorial(5)
-pi_value = math.pi
+X=25
+sqrt_x=math.sqrt(X)
+factorial_x=math.factorial(X)
+pi_value=math.pi
 
-print("Math Library Results:")
-print(f"Square Root of {x}: {sqrt_x}")
-print(f"Factorial of 5: {factorial_5}")
-print(f"Value of Pi: {pi_value}")
+print("Math Library Results : ")
+print(f"Square Root of {X} is : {sqrt_x}")
+print(f"Factorial of {X} is : {factorial_x}")
+print(f"Value of Pi is : {pi_value}")
 print()
 
-arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+arr =np.array([float(x) for x in input("Enter numbers seperated by spaces : ").split()])
+mean_arr=np.mean(arr)
+std_arr=np.std(arr)
+sum_arr=np.sum(arr)
 
-mean_arr = np.mean(arr)
-std_arr = np.std(arr)
-sum_arr = np.sum(arr)
-random_numbers = np.random.rand(5)
-
-print("NumPy Library Results:")
-print(f"Mean of array: {mean_arr}")
-print(f"Standard Deviation of array: {std_arr}")
-print(f"Sum of array elements: {sum_arr}")
-print(f"Random Numbers: {random_numbers}")
+print("NumPy Library Results :")
+print(f"Mean : {mean_arr}")
+print(f"Standard Deviation : {std_arr}")
+print(f"Sum : {sum_arr}")
 print()
 
-data_normal = stats.norm.rvs(loc=0, scale=1, size=1000)
+data_normal= stats.norm.rvs(loc=0,scale=1,size=1000)
+mean_nor=np.mean(data_normal)
+std_nor=np.std(data_normal)
 
-mean_normal = np.mean(data_normal)
-std_normal = np.std(data_normal)
+print("SciPy Library Results : ")
+print(f"Mean of Normal Distribution Data :  {mean_nor}")
+print(f"Standard Deviation of Normal Distribution Data :  {std_nor}")
 
-print("SciPy Library Results:")
-print("Generated Normal Distribution Data : ---")
-print(f"Mean : {mean_normal}")
-print(f"Std Dev : {std_normal}")
